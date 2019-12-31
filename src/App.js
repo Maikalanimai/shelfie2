@@ -5,15 +5,40 @@ import DashBoard from "./components/DashBoard/DashBoard";
 import {Route, Switch} from 'react-router-dom'
 import AddInventory from './components/Inventory/AddInventory'
 import Edit from './components/Inventory/Edit'
+import Axios from "axios";
 
-function App() {
+class App extends React.Component{
+  constructor() {
+    super()
+    this.state = {
+      inventory: []
+    }
+  }
+
+  componentDidMount(){
+    Axios.get('/api/inventory').then(res => 
+      this.setState({
+        inventory: res.data
+      }))
+  }
+
+  componentDidUpdate() {
+    Axios.get('/api/inventory').then(res => 
+      this.setState({
+        inventory: res.data
+      }))
+  }
+
+
+  render() {
   return (
     <div className="App">
       <Header />
       <Switch>
         <Route
         exact path='/'>
-          <DashBoard />
+          <DashBoard 
+          inventory={this.state.inventory}/>
         </Route>
         <Route path='/addinventory'>
           <AddInventory/>
@@ -23,7 +48,7 @@ function App() {
         </Route>
       </Switch>
     </div>
-  );
+  )};
 }
 
 export default App;
