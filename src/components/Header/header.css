@@ -1,0 +1,11 @@
+header {
+    height: 10vh;
+    background: #AB2A19;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 5fr;
+    align-items: center;
+    justify-items: center;
+    color: white;
+}
+

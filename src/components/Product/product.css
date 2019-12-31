@@ -1,0 +1,6 @@
+.item {
+  margin: 2rem;
+  background: #D34735;
+  display: flex;
+  align-items: center;
+}

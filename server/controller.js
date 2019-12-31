@@ -15,7 +15,7 @@ module.exports = {
   deleteProduct: (req, res) => {
     const db = req.app.get("db");
     const { id } = req.params;
-    db.delete_products(id).then(product => res.status(200).send(product));
+    db.delete_product(id).then(product => res.status(200).send(product));
   },
   updateProduct: (req, res) => {
     const db = req.app.get("db")

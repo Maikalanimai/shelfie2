@@ -30,7 +30,7 @@ export default class AddInventory extends Component {
   render() {
     return (
       <div>
-        AddInventory.jsx
+
         
         <img alt={'reeeeeeeeeeee'} src={this.state.img}/>
   

@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import Product from '../Product/Producst'
+import './dashboard.css'
 
 export default class DashBoard extends Component {
     constructor() {
@@ -9,11 +10,14 @@ export default class DashBoard extends Component {
         }
     }
 
+    componentDidUpdate(){
+        
+    }
     render(){
         
         return(
-            <div>
-                DashBoard.jsx
+            <div className='products'>
+                
                 {this.props.inventory.map((e,i) => {
             return(<Product
             id={e.id}

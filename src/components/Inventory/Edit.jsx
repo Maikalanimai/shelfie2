@@ -45,7 +45,6 @@ class Edit extends Component {
     
     return (
       <div>
-        Edit.jsx
         <img src={this.state.img} alt={this.state.name}/>
         <input 
         onChange={e => this.handleChange(e, 'img')}
