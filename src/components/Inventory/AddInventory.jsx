@@ -29,10 +29,10 @@ export default class AddInventory extends Component {
 
   render() {
     return (
-      <div>
+      <div className='form'>
 
         
-        <img alt={'reeeeeeeeeeee'} src={this.state.img}/>
+        <img alt={'Product Preview'} src={this.state.img}/>
   
         <input 
         onChange={e => this.handleChange(e, 'img')}

@@ -1,0 +1,7 @@
+.form {
+    display: grid;
+    margin: 15% 25%; 
+    justify-items: center;
+    align-items: center;
+    background: #3ad886;
+}

@@ -20,8 +20,8 @@ class Product extends Component {
         <div className='content'>
           <h3>Product: {this.props.name}</h3>
         <h4>Price: {this.props.price}</h4>
-        <Link to={`/edit/${this.props.id}`}><button>Edit</button></Link>
-        <button onClick={() => this.deleteProduct()}>Delete</button>
+        <Link to={`/edit/${this.props.id}`}><button className='product-button'>Edit</button></Link>
+        <button className='product-button' onClick={() => this.deleteProduct()}>Delete</button>
         </div>
       </div>
     );

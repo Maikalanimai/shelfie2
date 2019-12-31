@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
 import Axios from "axios";
+import './form.css'
 
 class Edit extends Component {
   constructor() {
@@ -44,7 +45,7 @@ class Edit extends Component {
   render() {
     
     return (
-      <div>
+      <div className='form'>
         <img src={this.state.img} alt={this.state.name}/>
         <input 
         onChange={e => this.handleChange(e, 'img')}
